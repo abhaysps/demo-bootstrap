@@ -1,0 +1,110 @@
+<div class="container">
+  <h2>Accordion Practice</h2>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+          Buttons Functionality Practice
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+        <div class="card-body">
+          <div class="container">
+            <div class="d-flex justify-content-around m-3">
+              <div class="btn btn-primary"
+                [ngStyle]="{'background-color': isOneSelected ? 'green' : 'red'}"
+                (click)="isOneSelected = !isOneSelected"
+              >Change Color on Toggle</div>
+              <div class="btn btn-primary" data-toggle="modal" data-target="#button2">Open Modal(DialogBox)</div>
+              <div class="modal fade" id="button2">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 *ngIf="!clickedClick" class="modal-title">Dialog Opened</h4>
+                      <h4 *ngIf="clickedClick" class="modal-title">Dialog Opened and Changed</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <div *ngIf="!clickedClick">
+                        Either click on close button on the top right corner of the dialog box, or click on Close button on the bottom right.
+                        Click on 'Click Here' to change the text of the dialog.
+                      </div>
+                      <div *ngIf="clickedClick">
+                        The 'Click Here' button was clicked. So the heading and the body is changed and color of the buttons are also changed.
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" *ngIf="!clickedClick" (click)="clickedClick = !clickedClick">Click Here</button>
+                      <button type="button" class="btn btn-success" *ngIf="clickedClick" (click)="clickedClick = !clickedClick">Click Again</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal" *ngIf="!clickedClick">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+          Containers Functionality Practice
+        </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <div class="row mb-2">
+            <div class="col mb-2">
+              <img src="https://www.energids.be/nl/media/mediumimg/18/24tarif-exclusif-nuit.jpg"
+              width="300" height="300">
+            </div>
+            <div class="col mb-2">
+              <img src="https://www.sciencenews.org/wp-content/uploads/2019/09/091119_mt_antisolar_feat-1028x579.jpg"
+              width="300" height="300">
+            </div>
+          </div>
+          <div class="row mdb-2">
+            <div class="col mb-2">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQOx0Epgc9TeDnfrw-wzJHRpxYzCtYyw4Hc2w&usqp=CAU"
+              width="300" height="300">
+            </div>
+            <div class="col mb-2">
+              <img src="https://i.pinimg.com/originals/52/a3/05/52a30508c1aaae473ed48ae8f1d876d9.jpg"
+              width="300" height="300">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          Dropdowns Functionality Practice
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Details
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button" (click)="showDetail('name')">Name</button>
+              <button class="dropdown-item" type="button" (click)="showDetail('company')">Company's Name</button>
+              <button class="dropdown-item" type="button" (click)="showDetail('designation')">Designation</button>
+            </div>
+          </div>
+          <div class="m-2">
+            <div>
+              <span *ngIf="tempStore === 'name'">Name is : </span>
+              <span *ngIf="tempStore === 'company'">Company's Name is : </span>
+              <span *ngIf="tempStore === 'designation'">Designation is : </span>
+            </div>
+            {{selectedDropDown}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
