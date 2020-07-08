@@ -1,0 +1,171 @@
+ <div class="container pt-0 ml-0" >
+   <div class="row">
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 pt-0 pl-0 float-left">
+        <nav class="navbar bg-light">
+          <ul class="navbar-nav">
+            <li class="nav-item py-4">
+              <a class="nav-link" style="cursor:pointer" (click)="selectType('personal')">Personal Information</a>
+            </li>
+            <li class="nav-item py-4">
+              <a class="nav-link" style="cursor:pointer" (click)="selectType('education')">Education</a>
+            </li>
+            <li class="nav-item py-4">
+              <a class="nav-link" style="cursor:pointer" (click)="selectType('hobby')">Hobbies</a>
+            </li>
+            <li class="nav-item py-4">
+              <a class="nav-link" style="cursor:pointer" (click)="selectType('skill')">Skills</a>
+            </li>
+            <li class="nav-item py-4">
+              <a class="nav-link" style="cursor:pointer" (click)="selectType('social')">Social Handles</a>
+            </li>
+            <li class="nav-item py-4">
+              <a class="nav-link" style="cursor:pointer" (click)="selectType('pen')">Pen Down</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 pt-2">
+        <div *ngIf="type === 'personal'">
+          <div class="card bg-info text-white">
+            <div class="card-body">Name : Abhay Sharma</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Father's Name : Ashwani Kumar Sharma</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Mother's Name : Saroj Bala Sharma</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Blood Group : O+ve</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">DOB : 18/04/1998</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Identity Proof : Aadhaar Card, Voter ID card, 10 Report Card</div>
+          </div>
+        </div>
+        <div *ngIf="type === 'education'">
+          <div class="card bg-info text-white">
+            <div class="card-body">Graduation : D.A.V. University (B.Tech CSE)</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">12th : D.A.V. Public School, Shimla</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">10th : D.A.V. Public School, Shimla</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Internship (6 months) : 75Ways Technology</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Machine Learning (45 Days) : DataCamp, Udemy</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Core Java (45 Days) : Aptech Institution</div>
+          </div>
+        </div>
+        <div *ngIf="type === 'hobby'">
+          <div class="card bg-info text-white">
+            <div class="card-body">Book Reading</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Coding</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Listening Music</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Implementing Data Structures</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Drawing</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Graphic Designing</div>
+          </div>
+        </div>
+        <div *ngIf="type === 'skill'">
+          <div class="card bg-info text-white">
+            <div class="card-body">HTML</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">CSS</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Bootstrap(Learning)</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Angular</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">JavaScript</div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">Photoshop</div>
+          </div>
+        </div>
+        <div *ngIf="type === 'social'">
+          <div class="card bg-info">
+            <div class="card-body">
+              <a href="https://www.linkedin.com/in/abhay-sharma-4528a5191/" class="text-white">LinkedIn</a>
+            </div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">
+              <a href="https://www.behance.net/sharmaabhac285"
+              class="text-white">Behance</a>
+            </div>
+          </div>
+          <br>
+          <div class="card bg-info text-white">
+            <div class="card-body">
+              <a href="https://github.com/abhayincipientsharma"
+              class="text-white">GitHub</a>
+            </div>
+          </div>
+          <br>
+        </div>
+        <div *ngIf="type === 'pen'">
+          <div class="col-sm-4">
+            <div class="card" style="width:400px">
+              <div class="card-body">
+                <h4 class="card-title">Things Matter</h4>
+                <p class="card-text">There goes the things that matter,
+                  which seems of concern at first, but later, time makes them not important at all.
+                </p>
+              </div>
+           </div>
+            <div class="card mt-3" style="width:400px">
+              <div class="card-body">
+                <h4 class="card-title">At last none remains</h4>
+                <p class="card-text">Started the journey with many, some left when saw me fall. Other got bored and left. Few found me of not their type. And at last I completed the journey with my 2 legs alone.
+                </p>
+              </div>
+           </div>
+          </div>
+        </div>
+      </div>
+   </div>
+</div>
