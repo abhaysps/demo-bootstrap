@@ -1,0 +1,9 @@
+<app-header
+  (toggle)="showView($event)"
+  (toggleAccordion)="showView($event)"
+></app-header>
+<app-home *ngIf="type === 'home'"></app-home>
+<app-stand *ngIf="type === 'stand'"></app-stand>
+<app-who *ngIf="type === 'who'"></app-who>
+<app-about *ngIf="type === 'about'"></app-about>
+<app-accordion *ngIf="type === 'accordion'"></app-accordion>
